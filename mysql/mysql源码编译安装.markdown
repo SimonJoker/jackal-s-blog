@@ -30,9 +30,25 @@ useradd -M -s /sbin/nologin mysql
 ```
 #### 4、编译安装源码
 ```
+cd /usr/local/src/mysql/mysql-5.7.12
+
 # 预编译
 
-cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DMYSQL_DATADIR=/data/mysql -DDOWNLOAD_BOOST=1 -DWITH_BOOST=./boost -DSYSCONFDIR=/etc -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_PARTITION_STORAGE_ENGINE=1 -DWITH_FEDERATED_STORAGE_ENGINE=1 -DWITH_BLACKHOLE_STORAGE_ENGINE=1 -DWITH_MYISAM_STORAGE_ENGINE=1 -DENABLED_LOCAL_INFILE=1 -DENABLE_DTRACE=0 -DDEFAULT_CHARSET=utf8mb4 -DDEFAULT_COLLATION=utf8mb4_general_ci -DWITH_EMBEDDED_SERVER=1
+cmake . -DCMAKE_INSTALL_PREFIX=/usr/local/mysql \
+ -DMYSQL_DATADIR=/data/mysql \
+ -DDOWNLOAD_BOOST=1 \
+ -DWITH_BOOST=./boost \
+ -DSYSCONFDIR=/etc \
+ -DWITH_INNOBASE_STORAGE_ENGINE=1 \
+ -DWITH_PARTITION_STORAGE_ENGINE=1 \
+ -DWITH_FEDERATED_STORAGE_ENGINE=1 \
+ -DWITH_BLACKHOLE_STORAGE_ENGINE=1 \
+ -DWITH_MYISAM_STORAGE_ENGINE=1 \
+ -DENABLED_LOCAL_INFILE=1 \
+ -DENABLE_DTRACE=0 \
+ -DDEFAULT_CHARSET=utf8mb4 \
+ -DDEFAULT_COLLATION=utf8mb4_general_ci \
+ -DWITH_EMBEDDED_SERVER=1
 
 
 # 编译&安装（编译过程很消耗资源，内存过小编译可能不能成功，将话费大量时间）
@@ -62,7 +78,7 @@ default-character-set = utf8mb4
 
 [mysqld]
 port = 3306
-socket = /temp/mysql.sock
+socket = /tmp/mysql.sock
 
 basedir = /usr/local/mysql
 datadir = /data/mysql
