@@ -105,7 +105,7 @@ log_bin = mysql-bin
 binlog_format = mixed
 expire_logs_days = 30
 log_error = /data/mysql/mysql_error.log
-slow_quer_log = 1
+slow_query_log = 1
 long_query_time = 1
 slow_query_log_file = /data/mysql/mysql-slow.log
 
