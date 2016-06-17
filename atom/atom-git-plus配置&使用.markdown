@@ -11,6 +11,7 @@ __注：如果你的环境中除了github 还有其他git命令（如：git.exe,
 ### 1、在github上创建一个版本库
 - 可以在[github.com](https://github.com) 上面创建
 - 可以使用 *github* 桌面客户端建立
+
 ### 2、将新建好的版本库克隆到本地（*这里一定通过ssh协议来进行克隆*）
 - 获取版本库.git连接：
 ![](http://7xrn7f.com1.z0.glb.clouddn.com/16-6-17/85493767.jpg)
